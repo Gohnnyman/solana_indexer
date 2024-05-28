@@ -1,0 +1,17 @@
+[queue_storage]
+storage_url = "postgresql://user@localhost/postgres"
+storage_type = "PostgreSQL"
+# storage_url = "amqp://guest:guest@localhost:5672?Transactions"
+# storage_type = "RabbitMQ"
+
+[main_storage]
+database_url = "http://solana_staking:solana_staking@http(localhost:8123)/solana_staking"
+# database_url = "tcp://solana_staking:solana_staking@tcp(localhost:9000)/solana_staking"
+
+[transactions_parsing]
+number_of_threads = 8
+
+[prometheus_exporter]
+bind_address = "127.0.0.1:9898"
+
+

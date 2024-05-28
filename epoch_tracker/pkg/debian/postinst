@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+USER="indexer"
+
+create_user() {
+    if id ${USER} > /dev/null 2>&1; then return; fi
+    adduser --system --no-create-home --group ${USER}
+}
+
+case "$1" in
+configure)
+    create_user
+    ;;
+esac
+
+#DEBHELPER#

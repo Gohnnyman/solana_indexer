@@ -1,0 +1,11 @@
+[endpoint]
+url = "https://api.mainnet-beta.solana.com/"
+
+[storage]
+url = "host=localhost user=solana_staking password=solana_staking dbname=solana_staking"
+
+[validator]
+vote_account = "9QU2QSxhb24FUX3Tu2FpczXjpK3VYrvRudywSZaM29mF"
+
+[prometheus_exporter]
+bind_address = "127.0.0.1:9899"

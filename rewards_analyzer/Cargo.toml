@@ -1,0 +1,37 @@
+[package]
+name = "rewards_analyzer"
+version = "3.2.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["on_ch_cluster"]
+on_ch_cluster = []
+
+[dependencies]
+anyhow = "1.0.58"
+async-trait = "~0.1"
+chrono-tz = "0.5.3"
+clap = { version = "3.2.14", features = ["cargo"] }
+clickhouse = { git = "https://github.com/VadimGrozinok/clickhouse.rs.git" }
+clickhouse-rs = { version = "1.0.0-alpha.1" }
+# clickhouse-rs = { version = "0.1.21" }
+config = "0.13.0"
+dsn = "1.0.2"
+env_logger = "0.9.0"
+futures = "0.3.21"
+hyper = { version = "0.14.20", features = ["server", "http1", "tcp"] }
+log = "0.4.17"
+prometheus = { version = "0.13.3", features = ["process"] }
+serde = "1.0.140"
+serde_json = "1.0.93"
+solana-transaction-status = "1.11.4"
+thiserror = "1.0.31"
+tokio = { version = "1.14.1", features = ["full"] }
+tokio-postgres = { version = "0.7.6", features = ["with-serde_json-1"] }
+
+[dependencies.chrono]
+version = "0.4"
+default-features = false
+features = ["std"]

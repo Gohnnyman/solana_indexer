@@ -1,0 +1,63 @@
+[package]
+name = "instructions_data_analyzer"
+version = "0.8.0"
+edition = "2021"
+
+[lib]
+name = "macros"
+path = "src/macros.rs"
+proc-macro = true
+
+[features]
+default = ["on_ch_cluster"]
+on_ch_cluster = []
+
+[dependencies]
+anyhow = "1.0.56"
+async-trait = "~0.1"
+borsh = "0.9.3"
+clap = { version = "3.1.6", features = ["derive"] }
+clickhouse = { git = "https://github.com/VadimGrozinok/clickhouse.rs.git" }
+clickhouse-rs = { version = "1.0.0-alpha.1" }
+config = "0.13.0"
+convert_case = "~0.5"
+diesel = { version = "1.4.8", features = ["postgres"] }
+dsn = "1.0.2"
+dotenv = "0.15.0"
+env_logger = "0.9.0"
+flatbuffers = "~2.1"
+futures-lite = "~1.12"
+hyper = { version = "0.14.20", features = ["server", "http1", "tcp"] }
+log = "0.4.16"
+
+spl-discriminator = { version = "=0.2.2", git = "https://github.com/solana-labs/solana-program-library.git" }
+
+rust-base58 = "0.0.4"
+lapin = "~2.1"
+lazy_static = "1.4.0"
+proc-macro2 = "~1.0"
+prometheus = "0.13.1"
+quote = "~1.0"
+serde = "1.0.136"
+serde_derive = "1.0.103"
+serde_json = "1.0.79"
+serde_repr = "0.1.7"
+solana-account-decoder = "1.11.4"
+solana-client = "1.11.4"
+# solana-program = "1.11.5"
+solana-program = ">=1.18.11,<=2"
+solana-sdk = "1.11.4"
+solana-transaction-status = "1.11.4"
+syn = "~1.0"
+thiserror = "1.0.30"
+tokio = { version = "1.10", features = ["full"] }
+url = "2.3.1"
+serde_with = "3.8.1"
+
+[dependencies.chrono]
+version = "0.4"
+default-features = false
+features = ["std"]
+
+#[patch.'https://github.com/suharev7/clickhouse-rs.git']
+#clickhouse-rs = { version = "1.0.0-alpha.1" }

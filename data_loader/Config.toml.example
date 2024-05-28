@@ -1,0 +1,33 @@
+[queue_storage]
+database_url = ""
+
+[endpoint]
+url = "https://api.devnet.solana.com"
+
+[contracts]
+keys = [
+    "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s", 
+    "Stake11111111111111111111111111111111111111
+    "packFeFNZzMfD9aVWL7QbGz1WcU7R9zpf6pvNsw2BLu",
+    "vau1zxA2LbssAUEF7Gpw91zMM1LvXrvpzJtmZ58rPsn",
+    "p1exdMJcjVao65QdewkaZRUnU6VPSXhus9n2GzWfh98",
+    "auctxRXPeJoc4817jDhf4HbjnhEcr1cCXenosMhK5R8",
+    "hausS13jsjafwWwGqZTUQRmWyvyxn9EQpqMwV1PBBmk",
+    "cndy3Z4yapfJBmL3ShUp5exZKqR3z33thTzeNMm2gRZ",
+    "SaLeTjyUa5wXHnGuewUSyJ5JWZaHwz3TxqUntCE9czo",
+    "gdrpGjVffourzkdDRrQmySw4aTHr8a3xmQzzxSwFD1a",
+    "qntmGodpGkrM42mN68VCZHXnKqDCT8rdY23wFcXCLPd"
+] # List of all supported programs 
+
+[signatures_loading]
+reset_status_period = 300
+
+[transactions_loading]
+number_of_threads = 4
+load_only_successful_transactions = true
+
+[solana_client]
+client_type = "Rpc"
+
+[prometheus_exporter]
+bind_address = "127.0.0.1:9898"

@@ -1,0 +1,9 @@
+[epoch_storage]
+url = "postgresql://solana_staking:solana_staking@localhost/solana_staking"
+
+[main_storage]
+url = "tcp://solana_staking:solana_staking@tcp(localhost)/solana_staking"
+
+
+[prometheus_exporter]
+bind_address = "127.0.0.1:9999"

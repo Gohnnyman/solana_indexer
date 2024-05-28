@@ -1,0 +1,13 @@
+[Unit]
+Description=Solana Epoch Tracker
+After=postgresql.service network.target
+
+[Service]
+Type=simple
+User=indexer
+Restart=always
+RestartSec=30
+ExecStart=/usr/bin/metaplex_indexer_epoch_rewards_tracker -c /etc/epoch-tracker/Config.toml
+
+[Install]
+WantedBy=multi-user.target

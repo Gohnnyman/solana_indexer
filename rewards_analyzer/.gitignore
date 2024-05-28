@@ -1,0 +1,8 @@
+/.vscode
+target
+Config.toml
+config.toml
+*.notes
+*.ini
+*.log
+.env
